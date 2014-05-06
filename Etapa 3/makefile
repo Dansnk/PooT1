@@ -1,7 +1,7 @@
+.PHONY:run
 JFLAGS = -g
 JC = javac
-JVM = java
-FILE = salida.csv
+JVM= java
 .SUFFIXES: .java .class
 .java.class:
 	$(JC) $(JFLAGS) $*.java
@@ -9,20 +9,22 @@ FILE = salida.csv
 CLASSES = \
         Ball.java \
         MyWorld.java \
+        PhysicsElement.java \
 	Spring.java \
 	FixedHook.java \
-	SpringAchattable.java \
-        PhysicsElement.java \
+	SpringAttachable.java \
         PhysicsLab.java 
-		
 MAIN = PhysicsLab
 
 default: classes
 
 classes: $(CLASSES:.java=.class)
 
-run: $(MAIN).class
-	$(JVM) $(MAIN) $(FILE)
-
+run:	
+	@read -p "Ingrese delta: " DELTA; \ 
+	read -p "Ingrese tiempo a simular: " TOTAL; \ 
+	read -p "Ingrese tiempo de muestreo: " SAMPLING; \ 
+	javac PhysicsLab
+	java PhysicsLab $$DELTA $$TOTAL $$SAMPLING
 clean:
 	$(RM) *.class
