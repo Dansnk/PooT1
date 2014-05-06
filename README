@@ -1,0 +1,42 @@
+Diseño y Programación Orientados a Objetos
+1er. Sem 2014
+Tarea 1: Bolas, Resortes y Puntos de Apoyo como Objetos de Software
+
+1.- Integrantes: 
+
+	Matias Lacasia
+	Carlos Polanco
+	Daniel Veas
+
+2.- Carpetas:
+	A continuación se detalla como estan compuestos los archivos de la tarea: Cada Etapa a pesar de ser varias veces incremental, se fue
+	agregando a carpetas separadas para ver la progresión realizada, se adjunta la documentacion con los graficos logrados en cada caso,
+	ademas de las dificultades encontradas al programar. Cada carpeta contiene su propio archivo makefile para hacer correr la tarea.
+
+	Tarea 1 POO\
+		Etapa 1\
+		Etapa 2\
+		Etapa 3\
+		Etapa 4\
+		Etapa N+1\
+		README
+		Documentacion.pdf
+
+3.- Otros:
+	Ademas se incluyen los archivos de instalacionlos cambios agregados que no venian agregados en los archivos fueron comentados 
+	en  formato Javadoc para una correcta lectura.
+
+	Para poder compilar y ejecutar los archivos presentados en esta tarea es necesario tener instalado una versión reciente de 
+	Java Development Kit (JDK 1.7)
+
+4.- Compilación:
+	
+	-Para compilar todos los archivos .java, en la de la carpeta de la etapa correspondiente se debe ejecutar el siguiente comando por terminal: $ make  
+	
+	-Cada etapa puede ser ejecutada de dos formas:
+		- Desde consola con: $ java PhysicsLab  <delta tiempo>  <tiempo total a simular> <periodo de muestreo>
+		- Para guardar datos en un archivo recomendamos que use: $ java PhysicsLab  <delta tiempo>  <tiempo total a simular> <periodo de muestreo> > NombreArchivo.csv
+	
+		- Desde el makefile se puede ejecutar usando: $make run
+		- Luego de usar este comando se le pedirá que ingrese los datos por consola uno por uno.
+		- NOTA: Puede que de esta forma no resulte ya que no esta bien implementada.
